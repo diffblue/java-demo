@@ -1,5 +1,7 @@
 package com.diffblue.javatest;
 
+//Copyright 2016-2017 DiffBlue limited. All rights reserved.
+
 public class TicTacToe {
   /**
    * Checks if either player has won a tic-tac-toe game.

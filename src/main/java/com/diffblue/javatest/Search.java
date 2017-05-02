@@ -1,5 +1,7 @@
 package com.diffblue.javatest;
 
+//Copyright 2016-2017 DiffBlue limited. All rights reserved.
+
 public class Search {
   /**
    * Checks if an integer is contained within an array.

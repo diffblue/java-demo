@@ -1,5 +1,7 @@
 package com.diffblue.javatest;
 
+//Copyright 2016-2017 DiffBlue limited. All rights reserved.
+
 import com.diffblue.javatest.nestedobjects.subpackage.Order;
 import com.diffblue.javatest.nestedobjects.subpackage.Item;
 import com.diffblue.javatest.nestedobjects.User;
