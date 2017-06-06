@@ -1,0 +1,20 @@
+language: java
+dist: trusty
+sudo: true
+
+matrix:
+  include:      
+    #Linux
+    - os: linux
+    
+    # OSX
+    - os: osx
+      sudo: false
+
+# jdk_switcher does not work on OSX so only use if Linux
+before_install:
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then jdk_switcher use "oraclejdk8"; fi
+
+script:
+  - mvn compile
+  - mvn test
