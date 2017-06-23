@@ -1,4 +1,4 @@
-package com.diffblue.javatest.nestedobjects.subpackage;
+package com.diffblue.javademo.nestedobjects.subpackage;
 
 // Copyright 2016-2017 DiffBlue limited. All rights reserved.
 

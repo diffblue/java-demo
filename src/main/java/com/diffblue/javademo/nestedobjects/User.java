@@ -1,9 +1,9 @@
-package com.diffblue.javatest.nestedobjects;
+package com.diffblue.javademo.nestedobjects;
 
 // Copyright 2016-2017 DiffBlue limited. All rights reserved.
 
-import com.diffblue.javatest.nestedobjects.subpackage.Item;
-import com.diffblue.javatest.nestedobjects.subpackage.Order;
+import com.diffblue.javademo.nestedobjects.subpackage.Item;
+import com.diffblue.javademo.nestedobjects.subpackage.Order;
 
 public class User {
   public User(Order order)  {
