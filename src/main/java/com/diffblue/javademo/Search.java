@@ -1,4 +1,4 @@
-package com.diffblue.javatest;
+package com.diffblue.javademo;
 
 // Copyright 2016-2017 DiffBlue limited. All rights reserved.
 
