@@ -22,8 +22,9 @@ public class User {
 
   private Order order;
 
-  public void setOrder(Order newOrder) {
+  public User setOrder(Order newOrder) {
     order = newOrder;
+    return this;
   }
 
   public Order getOrder() {
