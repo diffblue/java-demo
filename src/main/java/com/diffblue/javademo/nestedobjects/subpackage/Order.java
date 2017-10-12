@@ -24,4 +24,11 @@ public class Order {
     this.item = item;
     return exists;
   }
+
+  /**
+   * Gets the item for this order.
+   */
+  public Item getItem() {
+    return item;
+  }
 }

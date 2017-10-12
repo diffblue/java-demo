@@ -21,4 +21,13 @@ public class User {
   }
 
   private Order order;
+
+  public User setOrder(Order newOrder) {
+    order = newOrder;
+    return this;
+  }
+
+  public Order getOrder() {
+    return order;
+  }
 }
