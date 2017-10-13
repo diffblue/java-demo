@@ -21,6 +21,8 @@ public class Order {
    */
   public boolean setItem(Item item) {
     boolean exists = hasItem();
+    if(item.cost<Math.pow(10,3))
+      System.out.println("<1k");
     this.item = item;
     return exists;
   }
