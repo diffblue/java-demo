@@ -15,15 +15,15 @@ public class TicTacToe {
    *   1: player X has won
    *   2: player O has won
    */
-  byte checkTicTacToePosition(byte[] a) {
+  public int checkTicTacToePosition(int[] a) {
     // First check number of cells
     if (a.length != 9) {
       return -1;
     }
 
     // Next check number of moves each player made
-    byte diff = 0;
-    for (byte i = 0; i < 9; i++) {
+    int diff = 0;
+    for (int i = 0; i < 9; i++) {
       if (a[i] == 1) {
         diff++;
       } else if (a[i] == 2) {
@@ -41,7 +41,7 @@ public class TicTacToe {
     // Otherwise we know we have a valid board state
 
     // Check if a row and column has won
-    for (byte i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
       if (a[i] == a[3 + i] && a[i] == a[6 + i]) {
         if (a[i] == 1) {
           return 1;
