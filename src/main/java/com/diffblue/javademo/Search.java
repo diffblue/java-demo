@@ -10,10 +10,9 @@ public class Search {
    */
   public boolean contains(int [] array, int target) {
     boolean found = false;
-    int i;
 
-    for (i = 0; i < array.length; ++i) {
-      if (array[i] == target) {
+    for (int count = 0; count < array.length; ++count) {
+      if (array[count] == target) {
         found = true;
       }
     }
@@ -21,11 +20,14 @@ public class Search {
     return found;
   }
 
-  public boolean isNeedleInHaystack(String s)
-  {
-    if("3b6e258214f894ab41c9deaaeb38d1fd9aeca9c7"
-         .equals(DigestUtils.sha1Hex(s)))
-    {
+  /**
+   * Check if the sha1 of the input matches an expected value.
+   * @param input input string
+   * @return boolean
+   */
+  public boolean isNeedleInHaystack(String input) {
+    if ("3b6e258214f894ab41c9deaaeb38d1fd9aeca9c7"
+         .equals(DigestUtils.sha1Hex(input))) {
       return true;
     }
     return false;
