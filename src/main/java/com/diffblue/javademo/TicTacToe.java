@@ -10,15 +10,15 @@ public class TicTacToe {
    *   2: player O field
    *   0: empty position
    * Return values:
-   *  -1: not a valid board state
    *   0: neither player has won
    *   1: player X has won
    *   2: player O has won
+   *   @throws IllegalArgumentException when the board is not valid
    */
-  public int checkTicTacToePosition(int[] board) {
+  public int checkTicTacToePosition(int[] board) throws IllegalArgumentException {
     // First check number of cells
     if (board.length != 9) {
-      return -1;
+      throw new IllegalArgumentException("Incorrect size of board");
     }
 
     // Next check number of moves each player made
@@ -29,13 +29,13 @@ public class TicTacToe {
       } else if (board[i] == 2) {
         diff--;
       } else if (board[i] != 0) {
-        return -1;
+        throw new IllegalArgumentException("Invalid player");
       }
     }
 
     // Fail if one player has made too many moves compared to the other
     if (diff > 1 || diff < -1) {
-      return -1;
+      throw new IllegalArgumentException("One player has made too many moves");
     }
 
     // Otherwise we know we have a valid board state
