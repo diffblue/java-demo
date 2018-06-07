@@ -1,10 +1,14 @@
-target
-.project
-.classpath
-.settings
-.vscode
-.idea
-java-demo.iml
-.gradle
+# Build products
+bin
 build
+target
+
+# Gradle downloaded dependencies
+libs
+
+# Gradle generated settings
+.classpath
+.gradle
+.project
+.settings
 
