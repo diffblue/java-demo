@@ -1,7 +1,0 @@
-buildCmd: mvn compile
-testCmd: mvn test
-cbmcArguments:
-  # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
-  # This will be auto-detected in a future version
-  java-max-input-array-length: 10
-  unwind: 10
