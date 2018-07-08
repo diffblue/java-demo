@@ -1,4 +1,18 @@
+ignoreExistingCoverage: true
 cbmcArguments:
-  # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
-  # This will be auto-detected in a future version
-  java-max-input-array-length: 10
+phases:
+-
+  timeout: 60
+  cbmcArguments:
+    unwind: 1
+    depth: false
+-
+  timeout: 120
+  cbmcArguments:
+    unwind: 2
+    depth: false
+-
+  timeout: 300
+  cbmcArguments:
+    unwind: 5
+    depth: false
