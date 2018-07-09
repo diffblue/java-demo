@@ -4,4 +4,5 @@ package com.diffblue.javademo.nestedobjects.subpackage;
 
 public class Item {
   public int cost;
+  public String name;
 }

@@ -19,6 +19,16 @@ public class User {
     }
     return order.item.cost == item.cost;
   }
+  /**
+   * Checks if an item name the same as the user's order item.
+   */
+  public boolean checkItemName(Item item) {
+    if (!order.hasItem()) {
+      return false;
+    }
+    return order.item.name == item.name;
+  }
+
 
   private Order order;
 
