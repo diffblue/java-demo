@@ -1,4 +1,41 @@
 cbmcArguments:
-  # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
-  # This will be auto-detected in a future version
-  java-max-input-array-length: 10
+  slice-function-calls: org\.slf4j\.Logger.*
+phases:
+-
+  timeout: 300
+  cbmcArguments:
+    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    depth: false
+    java-max-input-array-length: 10
+    java-max-vla-length: 33
+    java-throw-runtime-exceptions: false
+    string-max-input-length: 10
+    string-max-length: 300
+    string-printable: true
+    unwind: 1
+-
+  timeout: 300
+  cbmcArguments:
+    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    depth: false
+    java-max-input-array-length: 20
+    java-max-vla-length: 33
+    java-throw-runtime-exceptions: false
+    string-max-input-length: 100
+    string-max-length: 400
+    string-printable: false
+    unwind: 2
+-
+  timeout: 300
+  cbmcArguments:
+    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    depth: false
+    java-max-input-array-length: 30
+    java-max-vla-length: 33
+    java-throw-runtime-exceptions: true
+    string-max-input-length: 10
+    string-max-length: 400
+    string-printable: false
+    unwind: 10
+    # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
+    # This will be auto-detected in a future version
