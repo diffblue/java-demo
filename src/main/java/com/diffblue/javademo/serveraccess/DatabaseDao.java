@@ -5,6 +5,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+// Copyright 2016-2018 Diffblue limited. All rights reserved.
+
 public class DatabaseDao {
 
   private static DatabaseDao instance;
