@@ -1,8 +1,8 @@
+// Copyright 2016-2018 Diffblue limited. All rights reserved.
+
 package com.diffblue.javademo;
 
 import org.apache.commons.codec.digest.DigestUtils;
-
-// Copyright 2016-2018 Diffblue limited. All rights reserved.
 
 public class Search {
   /**
