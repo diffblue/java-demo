@@ -1,6 +1,6 @@
-package com.diffblue.javademo;
+// Copyright 2016-2018 Diffblue limited. All rights reserved.
 
-// Copyright 2016-2017 DiffBlue limited. All rights reserved.
+package com.diffblue.javademo;
 
 import com.diffblue.javademo.nestedobjects.subpackage.Order;
 import com.diffblue.javademo.nestedobjects.subpackage.Item;

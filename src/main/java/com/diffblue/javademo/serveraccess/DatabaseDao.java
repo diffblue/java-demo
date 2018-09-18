@@ -1,3 +1,5 @@
+// Copyright 2016-2018 Diffblue limited. All rights reserved.
+
 package com.diffblue.javademo.serveraccess;
 
 import com.mongodb.MongoClient;
