@@ -1,0 +1,18 @@
+image: maven
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+  - mvn compile
+  artifacts:
+    paths:
+    - target/
+
+test:
+  stage: test
+  script:
+  - mvn test
