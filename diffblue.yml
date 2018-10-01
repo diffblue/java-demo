@@ -1,6 +1,6 @@
 cbmcArguments:
   slice-function-calls: org\.slf4j\.Logger.*
-  java-external-code-action: 'mock-non-jdk'
+  java-external-code-action: 'mock'
 phases:
 -
   timeout: 300
@@ -21,7 +21,7 @@ phases:
 -
   timeout: 300
   cbmcArguments:
-    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    classpath: '/tools/cbmc/models.jar:.'
     depth: false
     max-nondet-array-length: 30
     unwind: 10
