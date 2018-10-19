@@ -1,7 +1,7 @@
 image: maven
 
 before_script:
-  - apt-get update && apt-get install jq
+  - apt-get update && apt-get install -y jq
   
 stages:
   - build
