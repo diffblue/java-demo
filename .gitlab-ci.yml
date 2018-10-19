@@ -8,6 +8,8 @@ build:
   stage: build
   script:
   - mvn compile
+  - MERGE_REQUEST_ID=$(curl --insecure --silent "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${REPO_TOKEN}&state=opened" | jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.iid")
+
   artifacts:
     paths:
     - target/
