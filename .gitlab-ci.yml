@@ -16,7 +16,7 @@ build:
     MERGE_REQUEST_ID=$(jq -r ".[]|select(.sha == \"$CI_COMMIT_SHA\")|.iid" < mergerequest.json)
     MERGE_REQUEST_SOURCE=$(jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.source_branch" < mergerequest.json)
     MERGE_REQUEST_TARGET=$(jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.target_branch" < mergerequest.json)
-    curl -d '{"commit":"'${CI_COMMIT_SHA}'", "mergeIid":"'${MERGE_REQUEST_ID}'","projectUrl": "'${CI_REPOSITORY_URL}'" "target": "'${MERGE_REQUEST_TARGET}'", "source": "'${MERGE_REQUEST_SOURCE}'"}' -H "Content-Type: application/json" -X POST http://35.197.217.141/gitlab-hook/diffblue/jdauth
+    curl -d --verbose '{"commit":"'${CI_COMMIT_SHA}'", "mergeIid":"'${MERGE_REQUEST_ID}'","projectUrl": "'${CI_REPOSITORY_URL}'", "target": "'${MERGE_REQUEST_TARGET}'", "source": "'${MERGE_REQUEST_SOURCE}'"}' -H "Content-Type: application/json" -X POST http://35.197.217.141/gitlab-hook/diffblue/jdauth
 
   artifacts:
     paths:
