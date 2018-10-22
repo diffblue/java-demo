@@ -12,7 +12,7 @@ build:
   script: |
     mvn compile
     echo "$CI_PROJECT_ID"
-    curl --insecure --silent "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${PRIVATE_TOKEN}&state=opened" | tee mergerequest.json
+    curl --insecure --verbose "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${PRIVATE_TOKEN}&state=opened" | tee mergerequest.json
     MERGE_REQUEST_ID=$(jq -r ".[]|select(.sha == \"$CI_COMMIT_SHA\")|.iid" < mergerequest.json)
     MERGE_REQUEST_SOURCE=$(curl --insecure --silent "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${PRIVATE_TOKEN}&state=opened" | jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.source_branch")
     MERGE_REQUEST_TARGET=$(curl --insecure --silent "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${PRIVATE_TOKEN}&state=opened" | jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.target_branch")
