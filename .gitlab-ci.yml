@@ -12,7 +12,8 @@ build:
   script: |
     mvn compile
     echo "$CI_PROJECT_ID"
-    MERGE_REQUEST_ID="curl --insecure --silent https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=$PRIVATE_TOKEN&state=opened | jq -r \".[]|select(.sha == \"$CI_COMMIT_SHA\")|.iid\""
+    MERGE_REQUEST_ID="curl --insecure --silent https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=$PRIVATE_TOKEN&state=opened | tee mergerequest.json
+    jq -r \".[]|select(.sha == \"$CI_COMMIT_SHA\")|.iid\"" < mergerequest.json
     MERGE_REQUEST_SOURCE=$(curl --insecure --silent "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${PRIVATE_TOKEN}&state=opened" | jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.source_branch")
     MERGE_REQUEST_TARGET=$(curl --insecure --silent "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/merge_requests?private_token=${PRIVATE_TOKEN}&state=opened" | jq -r ".[]|select(.sha == \"${CI_COMMIT_SHA}\")|.target_branch")
     curl -d {"commit":"${CI_COMMIT_SHA}", "mergeIid":"${MERGE_REQUEST_ID}", "target": "${MERGE_REQUEST_TARGET}", "source": "${MERGE_REQUEST_SOURCE}"} -H "Content-Type: application/json" -X POST http://35.197.217.141/
