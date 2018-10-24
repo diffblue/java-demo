@@ -1,5 +1,4 @@
 cbmcArguments:
-  slice-function-calls: org\.slf4j\.Logger.*
   java-external-code-action: 'mock'
 phases:
 -
