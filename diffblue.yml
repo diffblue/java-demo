@@ -1,28 +1,4 @@
 cbmcArguments:
-  java-external-code-action: 'mock'
-phases:
--
-  timeout: 300
-  cbmcArguments:
-    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-    depth: false
-    java-assume-inputs-non-null: true
-    max-nondet-array-length: 10
-    unwind: 1
--
-  timeout: 300
-  cbmcArguments:
-    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-    depth: false
-    string-printable: false
-    max-nondet-array-length: 20
-    unwind: 2
--
-  timeout: 300
-  cbmcArguments:
-    classpath: '/tools/cbmc/models.jar:.'
-    depth: false
-    max-nondet-array-length: 30
-    unwind: 10
-    # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
-    # This will be auto-detected in a future version
+  # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
+  # This will be auto-detected in a future version
+  max-nondet-array-length: 10
