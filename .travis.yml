@@ -18,3 +18,5 @@ before_install:
 script:
   - mvn compile
   - mvn test
+  - ant compile
+  - ant test
