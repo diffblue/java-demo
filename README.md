@@ -9,4 +9,3 @@ To work with the Mongo connection the following docker command will setup the DB
 
 Copyright 2016-2018 Diffblue limited. All rights reserved.
 
-update
