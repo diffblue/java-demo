@@ -1,4 +1,4 @@
-package com.diffblue.javademo.TicTacToeBoard;
+package com.diffblue.javademo.tictactoe;
 
 
 public class Board {
@@ -40,7 +40,7 @@ public class Board {
       return board[row][col];
     }
   }
-//
+
   /**
    * Get row of Player.
    *

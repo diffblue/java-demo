@@ -1,4 +1,4 @@
-package com.diffblue.javademo.TicTacToeBoard;
+package com.diffblue.javademo.tictactoe;
 
 
 public class TicTacToeGame {

@@ -1,4 +1,4 @@
-package com.diffblue.javademo.TicTacToeBoard;
+package com.diffblue.javademo.tictactoe;
 
 public enum Player {
   O, X, empty;
