@@ -1,19 +1,19 @@
 package com.diffblue.javademo.tictactoe;
 
-
 public class Board {
 
   private Player[][] board;
 
   /**
-   * Initialize board.
+   * Create a board when the board size is TicTacToe playable.
+   * size (row=col) needs to be odd number and have to be larger than 3.
    *
-   * @param size row
+   * @param size row/col
    */
   public Board(int size) {
     // Check if the board is TicTacToe playable
     if (size % 2 == 0 || size <= 1) {
-      throw new IllegalArgumentException("The board is not suited to play TicTacToe.");
+      throw new IllegalArgumentException("The board size has to be odd number and larger than 3.");
     } else {
       // Initialize board
       this.board = new Player[size][size];
@@ -27,31 +27,17 @@ public class Board {
 
 
   /**
-   * Get player value.
+   * Get player value for specified cel location.
    *
    * @param row row
    * @param col col
    * @return Player
    */
   public Player getPlayer(int row, int col) {
-    if (row < 0 || col < 0) {
-      throw new IllegalStateException("The board is invalid");
+    if (row < 0 || col < 0 || row >= board.length || col >= board.length) {
+      throw new IllegalStateException("The specified [row][col] is out of range of the board.");
     } else {
       return board[row][col];
-    }
-  }
-
-  /**
-   * Get row of Player.
-   *
-   * @param row row
-   * @return Player[]
-   */
-  public Player[] getPlayerRow(int row) {
-    if (row < 0) {
-      throw new IllegalStateException("The board is invalid");
-    } else {
-      return board[row];
     }
   }
 
@@ -62,8 +48,8 @@ public class Board {
    * @param col col
    */
   public void setPlayer(Player player, int row, int col) {
-    if (row < 0 || col < 0) {
-      throw new IllegalStateException("The board is invalid");
+    if (row < 0 || col < 0 || row >= board.length || col >= board.length) {
+      throw new IllegalStateException("The specified [row][col] is out of range of the board.");
     } else {
       this.board[row][col] = player;
     }
@@ -80,4 +66,3 @@ public class Board {
   }
 
 }
-

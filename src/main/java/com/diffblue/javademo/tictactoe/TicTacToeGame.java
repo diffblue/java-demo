@@ -1,13 +1,11 @@
 package com.diffblue.javademo.tictactoe;
 
-
 public class TicTacToeGame {
 
   private Board board = new Board(3);
 
-
   /**
-   * Check move of players.
+   * Check players on board made a valid move.
    */
   public boolean isValidMove() {
     int diff;
@@ -35,7 +33,6 @@ public class TicTacToeGame {
     }
     return true;
   }
-
 
   /**
    * Check Winner.
@@ -95,7 +92,5 @@ public class TicTacToeGame {
 
     // Neither player has won yet
     return '-';
-
   }
-
 }

@@ -72,7 +72,7 @@
               <consoleOutput>true</consoleOutput>
               <failsOnError>true</failsOnError>
               <violationSeverity>warning</violationSeverity>
-              <linkXRef>false</linkXRef>
+              <!--<linkXRef>false</linkXRef>-->
             </configuration>
             <goals>
               <goal>check</goal>
