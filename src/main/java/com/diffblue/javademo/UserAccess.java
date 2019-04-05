@@ -5,7 +5,7 @@ package com.diffblue.javademo;
 import com.diffblue.javademo.serveraccess.DatabaseDao;
 import org.bson.Document;
 
-public class UserAccess {
+public class UserAccess extends Search {
 
   private String currentUser;
 
@@ -38,4 +38,15 @@ public class UserAccess {
     currentUser = null;
     return false;
   }
+
+  public String search(int[] array, Integer code) {
+    boolean exist = contains(array, code);
+    if (exist) {
+      return "Found";
+    }
+    else {
+      return null;
+    }
+  }
+
 }
