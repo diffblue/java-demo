@@ -37,7 +37,7 @@ public class DatabaseDao {
    * Setup the connection to the database.
    */
   private void connectToDb() {
-    MongoClient mongoClient = new MongoClient( hostname, port);
+    MongoClient mongoClient = new MongoClient(hostname, port);
     mongoDatabase = mongoClient.getDatabase(dbName);
   }
 
