@@ -1,6 +1,6 @@
 package com.diffblue.javademo;
 
-import com.commons.standard.BaseEnum;
+    import com.commons.standard.BaseEnum;
 
 public class StandardEnum extends BaseEnum {
 

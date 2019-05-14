@@ -99,7 +99,7 @@ units:
           sourceFile: com/diffblue/javademo/StandardEnum.java
       # Child of StandardEnum.class
       # Child Coverage: Unknown %
-#dependenciesOnClasspath:
-#-
-#  source: classes
-#  classFile: com/commons/standard/BaseEnum.class
+dependenciesOnClasspath:
+-
+  source: classes
+  classFile: com/commons/standard/BaseEnum.class
