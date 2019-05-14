@@ -1,4 +1,94 @@
+# Tested on Deeptest Cover 1.12.2
 cbmcArguments:
-  # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
-  # This will be auto-detected in a future version
-  max-nondet-array-length: 10
+  java-generate-no-comments: true
+  java-external-code-action: 'mock'
+phases:
+  -
+    timeout: 60
+    cbmcArguments:
+      max-nondet-array-length: 10
+      unwind: 1
+      string-non-empty: true
+      java-assume-inputs-non-null: true
+  -
+    timeout: 60
+    cbmcArguments:
+      classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 10
+      unwind: 1
+  -
+    timeout: 60
+    cbmcArguments:
+      classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 20
+      unwind: 2
+      string-non-empty: true
+      java-assume-inputs-non-null: true
+  -
+    timeout: 60
+    cbmcArguments:
+      classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 20
+      unwind: 2
+      throw-runtime-exceptions: false
+  -
+    timeout: 60
+    cbmcArguments:
+      classpath: '/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 30
+      max-nondet-string-length: 10
+      unwind: 3
+      string-non-empty: true
+      java-assume-inputs-non-null: true
+      throw-runtime-exceptions: false
+      depth: false
+  -
+    timeout: 60
+    cbmcArguments:
+      classpath: '/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 30
+      max-nondet-string-length: 10
+      unwind: 3
+      throw-runtime-exceptions: false
+      depth: false
+  -
+    timeout: 120
+    cbmcArguments:
+      classpath: '/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 30
+      max-nondet-string-length: 10
+      unwind: 4
+      load-containing-class-only: true
+      string-non-empty: true
+      java-assume-inputs-non-null: true
+      throw-runtime-exceptions: false
+  -
+    timeout: 120
+    cbmcArguments:
+      classpath: '/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 50
+      max-nondet-string-length: 50
+      unwind: 4
+      load-containing-class-only: true
+      throw-runtime-exceptions: false
+      depth: false
+  -
+    timeout: 120
+    cbmcArguments:
+      classpath: '/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 130
+      max-nondet-string-length: 110
+      unwind: 10
+      string-non-empty: true
+      java-assume-inputs-non-null: true
+      throw-runtime-exceptions: false
+  -
+    timeout: 120
+    cbmcArguments:
+      classpath: '/tools/cbmc/models.jar:.'
+      max-nondet-array-length: 100
+      max-nondet-string-length: 175
+      unwind: 10
+      throw-runtime-exceptions: false
+      depth: false
+
