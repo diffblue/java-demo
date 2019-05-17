@@ -91,15 +91,3 @@ phases:
       unwind: 10
       throw-runtime-exceptions: false
       depth: false
-units:
-    - target:
-        - dir: target/classes
-          file: com/diffblue/javademo/StandardEnum.class
-          sourceDir: src/main/java
-          sourceFile: com/diffblue/javademo/StandardEnum.java
-      # Child of StandardEnum.class
-      # Child Coverage: Unknown %
-dependenciesOnClasspath:
--
-  source: classes
-  classFile: com/commons/standard/BaseEnum.class
