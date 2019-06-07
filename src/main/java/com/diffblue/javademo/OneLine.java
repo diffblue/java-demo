@@ -25,4 +25,18 @@ public class OneLine {
     }
     return z; 
   }
+
+  public boolean isDayOfMonth(String input) {
+    int i = Integer.parseInt(input);
+    return i > 0 && i < 32;
+  }
+
+  public boolean isUpperCase(String input) {
+    for (char c : input.toCharArray()) {
+      if (Character.isLetter(c) && Character.isLowerCase(c)) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
