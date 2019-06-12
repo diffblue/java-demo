@@ -39,4 +39,14 @@ public class OneLine {
     }
     return true;
   }
+  protected static boolean isWhitespace(char ch) {
+    return ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r';
+  }
+
+    public static int octToDigit(char ch) {
+      if ('0' <= ch && ch <= '7')
+          return ch - '0';
+      else
+          return -1;
+  }
 }
