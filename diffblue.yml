@@ -1,5 +1,6 @@
-buildCmd: mvn compile
-testCmd: mvn test
+buildJar: target/java-demo-1.0.0.jar
+jobName: build
+
 cbmcArguments:
   # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
   # This will be auto-detected in a future version
