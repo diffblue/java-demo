@@ -1,4 +1,130 @@
-cbmcArguments:
-  # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
-  # This will be auto-detected in a future version
-  max-nondet-array-length: 10
+buildCmd: ""
+testCmd: ""
+classpathCmd: ""
+prebuildCmd: ""
+phases:
+  -
+    cbmcArguments:
+      classpath: "/tools/cbmc/models.jar:."
+      cover-function-only: true
+      depth: 1500
+      java-max-vla-length: 48
+      do-not-test-methods-with-access: ["private"]
+      java-assume-inputs-non-null: false
+      max-nondet-array-length: 10
+      java-mock-class:
+        - "java.io.File"
+        - "java.io.FileInputStream"
+        - "java.io.FileReader"
+        - "java.io.InputStreamReader"
+        - "java.io.PrintWriter"
+        - "java.lang.Process"
+        - "java.lang.ProcessBuilder"
+        - "java.lang.System"
+        - "java.nio.file.Files"
+        - "java.nio.file.Paths"
+        - "java.security.KeyFactory"
+        - "java.security.Signature"
+        - "java.security.SecureRandom"
+        - "java.util.Date"
+        - "java.util.Random"
+      java-test-input-factory: "bmc"
+      java-test-input-factory-bmc-max-mutators: 2
+      java-test-input-factory-bmc-recursion-limit: 2
+      java-unwind-enum-static: true
+      java-test-input-factory-entry-point:
+        - "<init>"
+        - "set[A-Z]\\w*"
+      java-test-output-entry-point:
+        - "get[A-Z]\\w*"
+      max-nondet-string-length: 10
+      unwind: 2
+      throw-runtime-exceptions: false
+      string-printable: true
+      json-ui: true
+      cover: "location"
+    timeout: 60
+    skipVerification: false
+    ignore-existing-coverage: false
+  -
+    cbmcArguments:
+      classpath: "/tools/cbmc/models.jar:."
+      cover-function-only: true
+      depth: 3000
+      java-max-vla-length: 96
+      max-nondet-array-length: 10
+      java-mock-class:
+        - "java.io.File"
+        - "java.io.FileInputStream"
+        - "java.io.FileReader"
+        - "java.io.InputStreamReader"
+        - "java.io.PrintWriter"
+        - "java.lang.Process"
+        - "java.lang.ProcessBuilder"
+        - "java.lang.System"
+        - "java.nio.file.Files"
+        - "java.nio.file.Paths"
+        - "java.security.KeyFactory"
+        - "java.security.Signature"
+        - "java.security.SecureRandom"
+        - "java.util.Date"
+        - "java.util.Random"
+      java-test-input-factory: "bmc"
+      java-test-input-factory-bmc-max-mutators: 2
+      java-test-input-factory-bmc-recursion-limit: 2
+      java-unwind-enum-static: true
+      java-test-input-factory-entry-point:
+        - "<init>"
+        - "set[A-Z]\\w*"
+      java-test-output-entry-point:
+        - "get[A-Z]\\w*"
+      max-nondet-string-length: 50
+      unwind: 4
+      throw-runtime-exceptions: false
+      string-printable: true
+      json-ui: true
+      cover: "location"
+    timeout: 300
+    skipVerification: false
+    ignore-existing-coverage: false
+  -
+    cbmcArguments:
+      classpath: "/tools/cbmc/models.jar:."
+      cover-function-only: true
+      depth: 6000
+      max-nondet-array-length: 10
+      java-max-vla-length: 192
+      java-mock-class:
+        - "java.io.File"
+        - "java.io.FileInputStream"
+        - "java.io.FileReader"
+        - "java.io.InputStreamReader"
+        - "java.io.PrintWriter"
+        - "java.lang.Process"
+        - "java.lang.ProcessBuilder"
+        - "java.lang.System"
+        - "java.nio.file.Files"
+        - "java.nio.file.Paths"
+        - "java.security.KeyFactory"
+        - "java.security.Signature"
+        - "java.security.SecureRandom"
+        - "java.util.Date"
+        - "java.util.Random"
+      java-test-input-factory: "bmc"
+      java-test-input-factory-bmc`-max-mutators: 2
+      java-test-input-factory-bmc-recursion-limit: 2
+      java-unwind-enum-static: true
+      java-test-input-factory-entry-point:
+        - "<init>"
+        - "set[A-Z]\\w*"
+      java-test-output-entry-point:
+        - "get[A-Z]\\w*"
+      max-nondet-string-length: 100
+      unwind: 16
+      throw-runtime-exceptions: true
+      string-printable: true
+      json-ui: true
+      cover: "location"
+    timeout: 2400
+    skipVerification: false
+    ignore-existing-coverage: false
