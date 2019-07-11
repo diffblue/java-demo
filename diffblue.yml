@@ -2,3 +2,10 @@ cbmcArguments:
   # Because tic-tac-toe has 9 squares, we need to unwind the loops 10 times
   # This will be auto-detected in a future version
   max-nondet-array-length: 10
+phases:
+    timeout: 60
+    cbmcArguments:
+      smart-harness: simplest-constructor-and-nondet
+      string-input-value: ["foo", "Bar", "BAZ", "1234", "1a 2b 3c", "A1B2C3", "a,b,c", "1", "2", "3", "a/b/c", "a'b'c", ",", "/", "'"
+      java-assume-inputs-interval: "[1:4000]"
+      string-printable: true
