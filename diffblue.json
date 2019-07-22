@@ -1,0 +1,69 @@
+{
+  "phaseBase": {
+    "stringPrintable": true,
+    "throwRuntimeExceptions": false,
+    "classpath": "/tools/cbmc/models.jar:.",
+    "coverFunctionOnly": true,
+    "javaGenerateNoComments": true,
+    "javaMockClass": [
+      "java\\.io\\.File",
+      "java\\.io\\.FileInputStream",
+      "java\\.io\\.FileReader",
+      "java\\.io\\.InputStreamReader",
+      "java\\.io\\.PrintWriter",
+      "java\\.lang\\.Process",
+      "java\\.lang\\.ProcessBuilder",
+      "java\\.lang\\.System",
+      "java\\.nio\\.file\\.Files",
+      "java\\.nio\\.file\\.Paths",
+      "java\\.security\\.KeyFactory",
+      "java\\.security\\.Signature",
+      "java\\.security\\.SecureRandom",
+      "java\\.util\\.Date",
+      "java\\.util\\.Random"
+    ],
+    "javaTestInputFactory": "bmc",
+    "javaTestInputFactoryBmcMaxMutators": 2,
+    "javaTestInputFactoryBmcRecursionLimit": 2,
+    "javaUnwindEnumStatic": true,
+    "javaTestInputFactoryEntryPoint": [
+      "<init>",
+      "set[A-Z]\\w*"
+    ],
+    "javaTestOutputEntryPoint": [
+      "get[A-Z]\\w*"
+    ],
+    "maxNondetArrayLength": 10
+  },
+  "phases": {
+    "firstPhase": {
+      "initial": true,
+      "depth": 1500,
+      "javaMaxVlaLength": 48,
+      "maxNondetStringLength": 10,
+      "unwind": 2,
+      "timeout": 60,
+      "nextPhase": {
+        "default": "secondPhase"
+      }
+    },
+    "secondPhase": {
+      "depth": 3000,
+      "javaMaxVlaLength": 96,
+      "maxNondetStringLength": 50,
+      "unwind": 4,
+      "timeout": 300,
+      "nextPhase": {
+        "default": "thirdPhase"
+      }
+    },
+    "thirdPhase": {
+      "depth": 6000,
+      "javaMaxVlaLength":  192,
+      "maxNondetStringLength": 100,
+      "stringPrintable": false,
+      "unwind": 16,
+      "timeout": 2400
+    }
+  }
+}
