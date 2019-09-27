@@ -1,0 +1,21 @@
+{
+  "phaseBase": {
+    "preferDepsJar": true,
+    "context-include": [
+      "com.diffblue.javademo.",
+      "com.diffblue.annotation.",
+      "java.",
+      "org.cprover.",
+      "org.slf4j.helpers.MarkerIgnoringBase",
+      "org.slf4j.helpers.NamedLoggerBase",
+      "org.slf4j.helpers.NOPLogger",
+      "org.slf4j.ILoggerFactory",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Marker",
+      "sun.misc.",
+      "sun.nio.cs.",
+      "sun.util."
+    ]
+  }
+}
