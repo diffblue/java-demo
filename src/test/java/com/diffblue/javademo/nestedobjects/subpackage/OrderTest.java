@@ -1,9 +1,7 @@
 // Copyright 2016-2018 Diffblue limited. All rights reserved.
 
-package com.diffblue.javademo;
+package com.diffblue.javademo.nestedobjects.subpackage;
 
-import com.diffblue.javademo.nestedobjects.subpackage.Order;
-import com.diffblue.javademo.nestedobjects.subpackage.Item;
 import com.diffblue.javademo.nestedobjects.User;
 import org.junit.Assert;
 import org.junit.Test;
