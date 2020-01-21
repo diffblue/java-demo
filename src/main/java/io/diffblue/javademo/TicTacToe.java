@@ -1,6 +1,6 @@
 // Copyright 2016-2018 Diffblue limited. All rights reserved.
 
-package com.diffblue.javademo;
+package io.diffblue.javademo;
 
 public class TicTacToe {
   /**

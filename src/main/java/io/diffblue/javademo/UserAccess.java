@@ -1,8 +1,8 @@
 // Copyright 2016-2018 Diffblue limited. All rights reserved.
 
-package com.diffblue.javademo;
+package io.diffblue.javademo;
 
-import com.diffblue.javademo.serveraccess.DatabaseDao;
+import io.diffblue.javademo.serveraccess.DatabaseDao;
 import org.bson.Document;
 
 public class UserAccess {
