@@ -44,12 +44,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.diffblue</groupId>
-      <artifactId>deeptestutils</artifactId>
-      <version>1.9.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.jacoco</groupId>
       <artifactId>org.jacoco.agent</artifactId>
       <version>0.8.4</version>
