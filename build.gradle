@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 
 group = 'com.diffblue.javademo'
-version = '1.0.0'
+version = '1.0.1'
 
 description = 'Java Demo Project'
 
