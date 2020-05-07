@@ -4,7 +4,7 @@ apply plugin: 'jacoco'
 group = 'com.diffblue.javademo'
 version = '1.0.0'
 
-description = """Java Demo Project"""
+description = 'Java Demo Project'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
