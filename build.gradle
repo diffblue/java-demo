@@ -23,3 +23,18 @@ dependencies {
   testImplementation group: 'org.mockito', name: 'mockito-all', version:'1.10.19'
 }
 
+task printClasspath {	
+  def cp = "";	
+  if (project.hasProperty("sourceSets")) {
+    def classpath = []
+    project.sourceSets.test.runtimeClasspath.each {
+      classpath << it.toString()
+    }
+    project.sourceSets.test.output.each {
+      classpath.remove(it.toString())
+    }
+    cp = classpath.join(File.pathSeparator)
+  }
+  println "Classpath: " + cp;	
+}
+
