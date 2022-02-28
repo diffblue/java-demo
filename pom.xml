@@ -68,6 +68,11 @@
         <scope>test</scope>
         <classifier>runtime</classifier>
     </dependency>
+    <dependency>
+      <groupId>org.mozilla</groupId>
+      <artifactId>rhino-engine</artifactId>
+      <version>1.7.14</version>
+    </dependency>
   </dependencies>
 
   <build>
