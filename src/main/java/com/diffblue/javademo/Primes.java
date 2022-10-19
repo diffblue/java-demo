@@ -40,8 +40,8 @@ public class Primes {
         return calcNthPrime(10_000);
     }
 
-    public static int getHundredThousandthPrime() {
-        return getNthPrime(100_000);
+    public static int calcHundredThousandthPrime() {
+        return calcNthPrime(100_000);
     }
 
     public static int getMillionthPrime() {
