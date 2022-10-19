@@ -10,7 +10,7 @@ public class Primes {
      * @param n Ordinal of prime to return, 1st prime returns 2
      * @return A prime number
      */
-    public static int getNthPrime(int n) {
+    public static int calcNthPrime(int n) {
         int num = 1;
         int count = 0;
         int i;
