@@ -28,8 +28,8 @@ public class Primes {
         return num;
     }
 
-    public static int getNthPrime() {
-        return getNthPrime(100);
+    public static int calcNthPrime() {
+        return calcNthPrime(100);
     }
 
     public static int getThousandthPrime() {
