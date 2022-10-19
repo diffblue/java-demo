@@ -32,8 +32,8 @@ public class Primes {
         return calcNthPrime(100);
     }
 
-    public static int getThousandthPrime() {
-        return getNthPrime(1000);
+    public static int calcThousandthPrime() {
+        return calcNthPrime(1000);
     }
 
     public static int getTenThousandthPrime() {
