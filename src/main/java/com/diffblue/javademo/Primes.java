@@ -44,8 +44,8 @@ public class Primes {
         return calcNthPrime(100_000);
     }
 
-    public static int getMillionthPrime() {
-        return getNthPrime(1000_000);
+    public static int calcMillionthPrime() {
+        return calcNthPrime(1000_000);
     }
 //
 //    public int memberMethod(int a) {
