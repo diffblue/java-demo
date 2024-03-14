@@ -80,4 +80,8 @@ public class TicTacToe {
     // Neither player has won yet
     return 0;
   }
+
+  public int add(int a, int b) throws IllegalArgumentException {
+    return a+b;
+  }
 }
